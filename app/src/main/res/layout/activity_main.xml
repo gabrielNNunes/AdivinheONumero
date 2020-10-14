@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Adivinhe o número!"
+        android:textColor="#2D611F"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/falaMaquina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Clique em NOVO JOGO para começar!!"
+        android:textColor="#2D611F"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/entradaNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite Aqui!"
+        android:inputType="number"
+        android:padding="20dp"
+        android:textColor="#2D611F"
+        android:textColorHint="#2D611F"
+
+        />
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <Button
+            android:enabled="false"
+            android:onClick="Verificar"
+            android:id="@+id/botaoVerificar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Verificar!"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="0"
+            app:layout_rowSpan="2"
+            android:textColor="#fff"
+            android:background="#6D716C"
+            />
+
+        <TextView
+            android:id="@+id/tituloTentativas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tentativas"
+            android:textColor="#2D611F"
+            app:layout_column="1"
+            app:layout_gravity="center"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/tentativas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#2D611F"
+            app:layout_column="1"
+            app:layout_gravity="center"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/listaNumeros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#2D611F"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:paddingTop="10dp"
+    />
+
+
+
+    <Button
+        android:id="@+id/botaoNovoJogo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#2D611F"
+        android:onClick="NovoJogo"
+        android:text="Novo Jogo!"
+        android:textColor="#fff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Como jogar!"
+                    android:textColor="#2D611F"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="A jogo irá gerar um número aleatório de 1 à 100 e sua função será adivinhar esse número, você têm 10 tentativas!\n
+                    \n Digite um número no campo Digite Aqui! e clique no botão VERIFICAR! para tentar adivinhar o número, o jogo irá mostrar algumas dicas durante o jogo.\n\nBoa Sorte!"
+                    android:textColor="#2D611F"
+                    android:textSize="20sp"
+
+
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
+
